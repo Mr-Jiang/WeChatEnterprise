@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<!-- url-pattern中配置的/coreServlet用于指定wx.servlet.WXCoreServlet的访问路径 -->
+	<servlet>
+		<servlet-name>coreServlet</servlet-name>
+		<servlet-class>wx.servlet.WXCoreServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>coreServlet</servlet-name>
+		<url-pattern>/coreServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- OAuth2 网页授权登录 -->
+	<servlet>
+		<servlet-name>oauth2Servlet</servlet-name>
+		<servlet-class>wx.servlet.OAuth2Servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>oauth2Servlet</servlet-name>
+		<url-pattern>/oauth2Servlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- 二次验证 -->
+	<servlet>
+		<servlet-name>validationServlet</servlet-name>
+		<servlet-class>wx.servlet.ValidationServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>validationServlet</servlet-name>
+		<url-pattern>/validationServlet</url-pattern>
+	</servlet-mapping>
+
+
+</web-app>
