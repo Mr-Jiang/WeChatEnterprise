@@ -11,12 +11,12 @@ import java.util.Map;
  * <p>
  * GitHub:<a href="https://github.com/Mr-Jiang">https://github.com/Mr-Jiang</a>
  * <p>
- * Blog:
- * <a href="https://blog.csdn.net/jspping?viewmode=contents">https://blog.csdn.
+ * Blog: <a
+ * href="https://blog.csdn.net/jspping?viewmode=contents">https://blog.csdn.
  * net/jspping?viewmode=contents</a>
  * <p>
- * Personal Home Page:
- * <a href="http://www.engineer-jsp.cn/">http://www.engineer-jsp.cn/</a>
+ * Personal Home Page: <a
+ * href="http://www.engineer-jsp.cn/">http://www.engineer-jsp.cn/</a>
  * 
  * @author <a href="https://github.com/Mr-Jiang">Mr-Jiang</a>
  * @date 2018.08.24 16:55
@@ -68,9 +68,9 @@ public abstract class WXBaseProtocol {
 
 		// 关注者发送的消息
 		Content = requestMap.get("Content");
-		// 关注者发送的消息
+		// 关注者触发的事件类型
 		Event = requestMap.get("Event");
-		// 关注者发送的消息
+		// 关注者触发的key值
 		EventKey = requestMap.get("EventKey");
 		// 通讯录更改事件类型
 		ChangeType = requestMap.get("ChangeType");

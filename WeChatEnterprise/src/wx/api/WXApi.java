@@ -135,7 +135,7 @@ public class WXApi {
 	 */
 
 	/** 网页授权登录，获取code */
-	private static final String WX_GET_OAUTH2_CODE = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=%s&redirect_uri=%s&response_type=code&scope=%s&agentid=%d&state=%s#wechat_redirect";
+	private static final String WX_OAUTH2_GET_CODE = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=%s&redirect_uri=%s&response_type=code&scope=%s&agentid=%d&state=%s#wechat_redirect";
 
 	/** 网页授权登录，OAuth2 重定向回调地址 */
 	private static final String WX_OAUTH2_REDIRECT_URI = "http://www.engineer-jsp.cn/WeChatEnterprise/oauth2Servlet";
@@ -367,7 +367,7 @@ public class WXApi {
 	private static String formatOauth2Url(String appid, String redirect_uri,
 			String scope, int agentid, String state) {
 
-		return String.format(WX_GET_OAUTH2_CODE, appid, redirect_uri, scope,
+		return String.format(WX_OAUTH2_GET_CODE, appid, redirect_uri, scope,
 				agentid, state);
 	}
 }
